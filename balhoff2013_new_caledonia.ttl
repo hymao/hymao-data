@@ -42,7 +42,7 @@
                                                   owl:imports obo:bspo.owl ,
                                                               obo:hao.owl ,
                                                               obo:pato.owl ,
-                                                              obo:ro.owl .
+                                                              <http://purl.org/phenoscape/vocab.owl> .
 
 
 #################################################################
@@ -761,9 +761,9 @@ hymao:has_magnitude rdf:type owl:DatatypeProperty ;
                                                                                                                                                                                                                                                             owl:onProperty hymao:has_magnitude ;
                                                                                                                                                                                                                                                             owl:someValuesFrom [ rdf:type rdfs:Datatype ;
                                                                                                                                                                                                                                                                                  owl:onDatatype xsd:float ;
-                                                                                                                                                                                                                                                                                 owl:withRestrictions ( [ xsd:minInclusive "0.5"^^xsd:float
+                                                                                                                                                                                                                                                                                 owl:withRestrictions ( [ xsd:maxInclusive "0.666"^^xsd:float
                                                                                                                                                                                                                                                                                                         ]
-                                                                                                                                                                                                                                                                                                        [ xsd:maxInclusive "0.666"^^xsd:float
+                                                                                                                                                                                                                                                                                                        [ xsd:minInclusive "0.5"^^xsd:float
                                                                                                                                                                                                                                                                                                         ]
                                                                                                                                                                                                                                                                                                       )
                                                                                                                                                                                                                                                                                ]
@@ -15517,7 +15517,7 @@ terms:Taxon rdf:type owl:Class .
   swrl:head [ rdf:type swrl:AtomList ;
               rdf:rest rdf:nil ;
               rdf:first [ rdf:type swrl:ClassAtom ;
-                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8800> ;
+                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8799> ;
                           swrl:argument1 <urn:swrl#organism>
                         ]
             ] ;
@@ -15527,19 +15527,24 @@ terms:Taxon rdf:type owl:Class .
                           swrl:argument1 <urn:swrl#organism>
                         ] ;
               rdf:rest [ rdf:type swrl:AtomList ;
-                         rdf:first [ rdf:type swrl:ClassAtom ;
-                                     swrl:classPredicate obo:HAO_0000217 ;
-                                     swrl:argument1 <urn:swrl#compound_eye>
-                                   ] ;
                          rdf:rest [ rdf:type swrl:AtomList ;
+                                    rdf:first [ rdf:type swrl:ClassAtom ;
+                                                swrl:classPredicate obo:HAO_0000503 ;
+                                                swrl:argument1 <urn:swrl#malar_space>
+                                              ] ;
                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                               rdf:first [ rdf:type swrl:ClassAtom ;
-                                                           swrl:classPredicate obo:PATO_0000122 ;
-                                                           swrl:argument1 <urn:swrl#compound_eye_height>
-                                                         ] ;
                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                      swrl:classPredicate obo:PATO_0000122 ;
+                                                                      swrl:argument1 <urn:swrl#malar_space_length>
+                                                                    ] ;
                                                           rdf:rest [ rdf:type swrl:AtomList ;
                                                                      rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                            swrl:propertyPredicate hymao:has_unit ;
+                                                                                            swrl:argument2 <urn:swrl#compound_eye_height> ;
+                                                                                            swrl:argument1 <urn:swrl#measurement>
+                                                                                          ] ;
                                                                                 rdf:rest [ rdf:type swrl:AtomList ;
                                                                                            rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                                                                                                        swrl:propertyPredicate obo:BFO_0000051 ;
@@ -15547,23 +15552,18 @@ terms:Taxon rdf:type owl:Class .
                                                                                                        swrl:argument1 <urn:swrl#organism>
                                                                                                      ] ;
                                                                                            rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                  swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                                                  swrl:argument2 <urn:swrl#malar_space> ;
-                                                                                                                  swrl:argument1 <urn:swrl#organism>
-                                                                                                                ] ;
                                                                                                       rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                             swrl:propertyPredicate obo:BFO_0000053 ;
+                                                                                                                             swrl:argument1 <urn:swrl#compound_eye> ;
+                                                                                                                             swrl:argument2 <urn:swrl#compound_eye_height>
+                                                                                                                           ] ;
                                                                                                                  rdf:rest [ rdf:type swrl:AtomList ;
                                                                                                                             rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                                       rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
-                                                                                                                                                   swrl:propertyPredicate hymao:has_magnitude ;
-                                                                                                                                                   swrl:argument2 <urn:swrl#magnitude> ;
-                                                                                                                                                   swrl:argument1 <urn:swrl#measurement>
-                                                                                                                                                 ] ;
                                                                                                                                        rdf:rest [ rdf:type swrl:AtomList ;
                                                                                                                                                   rdf:rest rdf:nil ;
                                                                                                                                                   rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                                                                                                                                              swrl:builtin swrlb:lessThan ;
+                                                                                                                                                              swrl:builtin swrlb:greaterThanOrEqual ;
                                                                                                                                                               swrl:arguments [ rdf:type rdf:List ;
                                                                                                                                                                                rdf:first <urn:swrl#magnitude> ;
                                                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
@@ -15572,115 +15572,40 @@ terms:Taxon rdf:type owl:Class .
                                                                                                                                                                                         ]
                                                                                                                                                                              ]
                                                                                                                                                             ]
-                                                                                                                                                ]
+                                                                                                                                                ] ;
+                                                                                                                                       rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                                                                                                   swrl:propertyPredicate hymao:has_magnitude ;
+                                                                                                                                                   swrl:argument2 <urn:swrl#magnitude> ;
+                                                                                                                                                   swrl:argument1 <urn:swrl#measurement>
+                                                                                                                                                 ]
                                                                                                                                      ] ;
                                                                                                                             rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                                                                                                                                         swrl:propertyPredicate obo:BFO_0000053 ;
                                                                                                                                         swrl:argument1 <urn:swrl#malar_space> ;
                                                                                                                                         swrl:argument2 <urn:swrl#malar_space_length>
                                                                                                                                       ]
-                                                                                                                          ] ;
-                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                             swrl:propertyPredicate obo:BFO_0000053 ;
-                                                                                                                             swrl:argument1 <urn:swrl#compound_eye> ;
-                                                                                                                             swrl:argument2 <urn:swrl#compound_eye_height>
-                                                                                                                           ]
-                                                                                                               ]
+                                                                                                                          ]
+                                                                                                               ] ;
+                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                  swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                                                  swrl:argument2 <urn:swrl#malar_space> ;
+                                                                                                                  swrl:argument1 <urn:swrl#organism>
+                                                                                                                ]
                                                                                                     ]
-                                                                                         ] ;
-                                                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                            swrl:propertyPredicate hymao:has_unit ;
-                                                                                            swrl:argument2 <urn:swrl#compound_eye_height> ;
-                                                                                            swrl:argument1 <urn:swrl#measurement>
-                                                                                          ]
+                                                                                         ]
                                                                               ] ;
                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                                                                                  swrl:propertyPredicate hymao:has_measurement ;
                                                                                  swrl:argument1 <urn:swrl#malar_space_length> ;
                                                                                  swrl:argument2 <urn:swrl#measurement>
                                                                                ]
-                                                                   ] ;
-                                                          rdf:first [ rdf:type swrl:ClassAtom ;
-                                                                      swrl:classPredicate obo:PATO_0000122 ;
-                                                                      swrl:argument1 <urn:swrl#malar_space_length>
-                                                                    ]
-                                                        ]
-                                             ] ;
-                                    rdf:first [ rdf:type swrl:ClassAtom ;
-                                                swrl:classPredicate obo:HAO_0000503 ;
-                                                swrl:argument1 <urn:swrl#malar_space>
-                                              ]
-                                  ]
-                       ]
-            ]
-] .
-[ rdf:type swrl:Imp ;
-  swrl:head [ rdf:type swrl:AtomList ;
-              rdf:rest rdf:nil ;
-              rdf:first [ rdf:type swrl:ClassAtom ;
-                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8776> ;
-                          swrl:argument1 <urn:swrl#organism>
-                        ]
-            ] ;
-  swrl:body [ rdf:type swrl:AtomList ;
-              rdf:first [ rdf:type swrl:ClassAtom ;
-                          swrl:classPredicate obo:HAO_0000012 ;
-                          swrl:argument1 <urn:swrl#organism>
-                        ] ;
-              rdf:rest [ rdf:type swrl:AtomList ;
-                         rdf:rest [ rdf:type swrl:AtomList ;
-                                    rdf:rest [ rdf:type swrl:AtomList ;
-                                               rdf:rest [ rdf:type swrl:AtomList ;
-                                                          rdf:rest [ rdf:type swrl:AtomList ;
-                                                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                 swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                 swrl:argument2 <urn:swrl#compound_eye> ;
-                                                                                 swrl:argument1 <urn:swrl#organism>
-                                                                               ] ;
-                                                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                       swrl:propertyPredicate obo:BFO_0000053 ;
-                                                                                                       swrl:argument1 <urn:swrl#compound_eye> ;
-                                                                                                       swrl:argument2 <urn:swrl#compound_eye_height>
-                                                                                                     ] ;
-                                                                                           rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                      rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                 rdf:rest rdf:nil ;
-                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                             swrl:propertyPredicate pato:similar_in_magnitude_relative_to ;
-                                                                                                                             swrl:argument2 <urn:swrl#compound_eye_height> ;
-                                                                                                                             swrl:argument1 <urn:swrl#scape_length>
-                                                                                                                           ]
-                                                                                                               ] ;
-                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                  swrl:propertyPredicate obo:BFO_0000053 ;
-                                                                                                                  swrl:argument1 <urn:swrl#scape> ;
-                                                                                                                  swrl:argument2 <urn:swrl#scape_length>
-                                                                                                                ]
-                                                                                                    ]
-                                                                                         ] ;
-                                                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                            swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                            swrl:argument1 <urn:swrl#organism> ;
-                                                                                            swrl:argument2 <urn:swrl#scape>
-                                                                                          ]
-                                                                              ]
-                                                                   ] ;
-                                                          rdf:first [ rdf:type swrl:ClassAtom ;
-                                                                      swrl:classPredicate obo:PATO_0000122 ;
-                                                                      swrl:argument1 <urn:swrl#scape_length>
-                                                                    ]
+                                                                   ]
                                                         ] ;
                                                rdf:first [ rdf:type swrl:ClassAtom ;
                                                            swrl:classPredicate obo:PATO_0000122 ;
                                                            swrl:argument1 <urn:swrl#compound_eye_height>
                                                          ]
-                                             ] ;
-                                    rdf:first [ rdf:type swrl:ClassAtom ;
-                                                swrl:classPredicate obo:HAO_0000908 ;
-                                                swrl:argument1 <urn:swrl#scape>
-                                              ]
+                                             ]
                                   ] ;
                          rdf:first [ rdf:type swrl:ClassAtom ;
                                      swrl:classPredicate obo:HAO_0000217 ;
@@ -15701,15 +15626,452 @@ terms:Taxon rdf:type owl:Class .
                                      swrl:argument1 <urn:swrl#vm_of_metapectus>
                                    ] ;
                          rdf:rest [ rdf:type swrl:AtomList ;
-                                    rdf:first [ rdf:type swrl:ClassAtom ;
-                                                swrl:classPredicate obo:HAO_0000012 ;
-                                                swrl:argument1 <urn:swrl#organism>
-                                              ] ;
                                     rdf:rest [ rdf:type swrl:AtomList ;
                                                rdf:first [ rdf:type swrl:ClassAtom ;
                                                            swrl:classPredicate obo:HAO_0000557 ;
                                                            swrl:argument1 <urn:swrl#mesopectus>
                                                          ] ;
+                                               rdf:rest [ rdf:type swrl:AtomList ;
+                                                          rdf:rest [ rdf:type swrl:AtomList ;
+                                                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                                            swrl:classPredicate obo:PATO_0000122 ;
+                                                                                            swrl:argument1 <urn:swrl#vm_of_metapectus_length>
+                                                                                          ] ;
+                                                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                      rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                 rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                            rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                                        swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                                                                        swrl:argument2 <urn:swrl#metapectus> ;
+                                                                                                                                        swrl:argument1 <urn:swrl#organism>
+                                                                                                                                      ] ;
+                                                                                                                            rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                       rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                                                   swrl:propertyPredicate obo:BFO_0000053 ;
+                                                                                                                                                   swrl:argument1 <urn:swrl#vm_of_mesopectus> ;
+                                                                                                                                                   swrl:argument2 <urn:swrl#vm_of_mesopectus_length>
+                                                                                                                                                 ] ;
+                                                                                                                                       rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                                  rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                                             rdf:rest rdf:nil ;
+                                                                                                                                                             rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                                                                         swrl:propertyPredicate pato:decreased_in_magnitude_relative_to ;
+                                                                                                                                                                         swrl:argument1 <urn:swrl#vm_of_mesopectus_length> ;
+                                                                                                                                                                         swrl:argument2 <urn:swrl#vm_of_metapectus_length>
+                                                                                                                                                                       ]
+                                                                                                                                                           ] ;
+                                                                                                                                                  rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                                                              swrl:propertyPredicate obo:BFO_0000053 ;
+                                                                                                                                                              swrl:argument1 <urn:swrl#vm_of_metapectus> ;
+                                                                                                                                                              swrl:argument2 <urn:swrl#vm_of_metapectus_length>
+                                                                                                                                                            ]
+                                                                                                                                                ]
+                                                                                                                                     ]
+                                                                                                                          ] ;
+                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                             swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                                                             swrl:argument2 <urn:swrl#mesopectus> ;
+                                                                                                                             swrl:argument1 <urn:swrl#organism>
+                                                                                                                           ]
+                                                                                                               ] ;
+                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                  swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                                                  swrl:argument1 <urn:swrl#metapectus> ;
+                                                                                                                  swrl:argument2 <urn:swrl#vm_of_metapectus>
+                                                                                                                ]
+                                                                                                    ] ;
+                                                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                       swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                                       swrl:argument1 <urn:swrl#mesopectus> ;
+                                                                                                       swrl:argument2 <urn:swrl#vm_of_mesopectus>
+                                                                                                     ]
+                                                                                         ]
+                                                                              ] ;
+                                                                     rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                                 swrl:classPredicate obo:PATO_0000122 ;
+                                                                                 swrl:argument1 <urn:swrl#vm_of_mesopectus_length>
+                                                                               ]
+                                                                   ] ;
+                                                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                      swrl:classPredicate obo:HAO_0000605 ;
+                                                                      swrl:argument1 <urn:swrl#metapectus>
+                                                                    ]
+                                                        ]
+                                             ] ;
+                                    rdf:first [ rdf:type swrl:ClassAtom ;
+                                                swrl:classPredicate obo:HAO_0000012 ;
+                                                swrl:argument1 <urn:swrl#organism>
+                                              ]
+                                  ]
+                       ]
+            ] ;
+  swrl:head [ rdf:type swrl:AtomList ;
+              rdf:rest rdf:nil ;
+              rdf:first [ rdf:type swrl:ClassAtom ;
+                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8806> ;
+                          swrl:argument1 <urn:swrl#organism>
+                        ]
+            ]
+] .
+[ rdf:type swrl:Imp ;
+  swrl:body [ rdf:type swrl:AtomList ;
+              rdf:first [ rdf:type swrl:ClassAtom ;
+                          swrl:classPredicate obo:HAO_0000012 ;
+                          swrl:argument1 <urn:swrl#organism>
+                        ] ;
+              rdf:rest [ rdf:type swrl:AtomList ;
+                         rdf:first [ rdf:type swrl:ClassAtom ;
+                                     swrl:classPredicate obo:HAO_0000661 ;
+                                     swrl:argument1 <urn:swrl#ocellus>
+                                   ] ;
+                         rdf:rest [ rdf:type swrl:AtomList ;
+                                    rdf:first [ rdf:type swrl:ClassAtom ;
+                                                swrl:classPredicate obo:HAO_0000935 ;
+                                                swrl:argument1 <urn:swrl#seta>
+                                              ] ;
+                                    rdf:rest [ rdf:type swrl:AtomList ;
+                                               rdf:first [ rdf:type swrl:ClassAtom ;
+                                                           swrl:classPredicate obo:PATO_0000122 ;
+                                                           swrl:argument1 <urn:swrl#seta_length>
+                                                         ] ;
+                                               rdf:rest [ rdf:type swrl:AtomList ;
+                                                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                      swrl:classPredicate obo:PATO_0001334 ;
+                                                                      swrl:argument1 <urn:swrl#ocellus_diameter>
+                                                                    ] ;
+                                                          rdf:rest [ rdf:type swrl:AtomList ;
+                                                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                            swrl:propertyPredicate hymao:has_unit ;
+                                                                                            swrl:argument1 <urn:swrl#measurement> ;
+                                                                                            swrl:argument2 <urn:swrl#ocellus_diameter>
+                                                                                          ] ;
+                                                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                       swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                                       swrl:argument2 <urn:swrl#ocellus> ;
+                                                                                                       swrl:argument1 <urn:swrl#organism>
+                                                                                                     ] ;
+                                                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                  swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                                                  swrl:argument1 <urn:swrl#organism> ;
+                                                                                                                  swrl:argument2 <urn:swrl#seta>
+                                                                                                                ] ;
+                                                                                                      rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                             swrl:propertyPredicate obo:BFO_0000053 ;
+                                                                                                                             swrl:argument2 <urn:swrl#diameter> ;
+                                                                                                                             swrl:argument1 <urn:swrl#ocellus>
+                                                                                                                           ] ;
+                                                                                                                 rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                            rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                       rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                                                                                                   swrl:propertyPredicate hymao:has_magnitude ;
+                                                                                                                                                   swrl:argument2 <urn:swrl#magnitude> ;
+                                                                                                                                                   swrl:argument1 <urn:swrl#measurement>
+                                                                                                                                                 ] ;
+                                                                                                                                       rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                                  rdf:rest rdf:nil ;
+                                                                                                                                                  rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                                                                                                              swrl:builtin swrlb:greaterThan ;
+                                                                                                                                                              swrl:arguments [ rdf:type rdf:List ;
+                                                                                                                                                                               rdf:first <urn:swrl#magnitude> ;
+                                                                                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                          rdf:first "2.0"^^xsd:float ;
+                                                                                                                                                                                          rdf:rest rdf:nil
+                                                                                                                                                                                        ]
+                                                                                                                                                                             ]
+                                                                                                                                                            ]
+                                                                                                                                                ]
+                                                                                                                                     ] ;
+                                                                                                                            rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                                        swrl:propertyPredicate obo:BFO_0000053 ;
+                                                                                                                                        swrl:argument1 <urn:swrl#seta> ;
+                                                                                                                                        swrl:argument2 <urn:swrl#seta_length>
+                                                                                                                                      ]
+                                                                                                                          ]
+                                                                                                               ]
+                                                                                                    ]
+                                                                                         ]
+                                                                              ] ;
+                                                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                 swrl:propertyPredicate hymao:has_measurement ;
+                                                                                 swrl:argument2 <urn:swrl#measurement> ;
+                                                                                 swrl:argument1 <urn:swrl#seta_length>
+                                                                               ]
+                                                                   ]
+                                                        ]
+                                             ]
+                                  ]
+                       ]
+            ] ;
+  swrl:head [ rdf:type swrl:AtomList ;
+              rdf:rest rdf:nil ;
+              rdf:first [ rdf:type swrl:ClassAtom ;
+                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8765> ;
+                          swrl:argument1 <urn:swrl#organism>
+                        ]
+            ]
+] .
+[ rdf:type swrl:Imp ;
+  swrl:body [ rdf:type swrl:AtomList ;
+              rdf:first [ rdf:type swrl:ClassAtom ;
+                          swrl:classPredicate obo:HAO_0000012 ;
+                          swrl:argument1 <urn:swrl#organism>
+                        ] ;
+              rdf:rest [ rdf:type swrl:AtomList ;
+                         rdf:first [ rdf:type swrl:ClassAtom ;
+                                     swrl:classPredicate obo:HAO_0000217 ;
+                                     swrl:argument1 <urn:swrl#compound_eye>
+                                   ] ;
+                         rdf:rest [ rdf:type swrl:AtomList ;
+                                    rdf:first [ rdf:type swrl:ClassAtom ;
+                                                swrl:classPredicate obo:HAO_0000908 ;
+                                                swrl:argument1 <urn:swrl#scape>
+                                              ] ;
+                                    rdf:rest [ rdf:type swrl:AtomList ;
+                                               rdf:first [ rdf:type swrl:ClassAtom ;
+                                                           swrl:classPredicate obo:PATO_0000122 ;
+                                                           swrl:argument1 <urn:swrl#compound_eye_height>
+                                                         ] ;
+                                               rdf:rest [ rdf:type swrl:AtomList ;
+                                                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                      swrl:classPredicate obo:PATO_0000122 ;
+                                                                      swrl:argument1 <urn:swrl#scape_length>
+                                                                    ] ;
+                                                          rdf:rest [ rdf:type swrl:AtomList ;
+                                                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                       swrl:propertyPredicate obo:BFO_0000053 ;
+                                                                                                       swrl:argument1 <urn:swrl#compound_eye> ;
+                                                                                                       swrl:argument2 <urn:swrl#compound_eye_height>
+                                                                                                     ] ;
+                                                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                      rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                 rdf:rest rdf:nil ;
+                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                             swrl:propertyPredicate pato:increased_in_magnitude_relative_to ;
+                                                                                                                             swrl:argument2 <urn:swrl#compound_eye_height> ;
+                                                                                                                             swrl:argument1 <urn:swrl#scape_length>
+                                                                                                                           ]
+                                                                                                               ] ;
+                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                  swrl:propertyPredicate obo:BFO_0000053 ;
+                                                                                                                  swrl:argument1 <urn:swrl#scape> ;
+                                                                                                                  swrl:argument2 <urn:swrl#scape_length>
+                                                                                                                ]
+                                                                                                    ]
+                                                                                         ] ;
+                                                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                            swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                            swrl:argument1 <urn:swrl#organism> ;
+                                                                                            swrl:argument2 <urn:swrl#scape>
+                                                                                          ]
+                                                                              ] ;
+                                                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                 swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                 swrl:argument2 <urn:swrl#compound_eye> ;
+                                                                                 swrl:argument1 <urn:swrl#organism>
+                                                                               ]
+                                                                   ]
+                                                        ]
+                                             ]
+                                  ]
+                       ]
+            ] ;
+  swrl:head [ rdf:type swrl:AtomList ;
+              rdf:rest rdf:nil ;
+              rdf:first [ rdf:type swrl:ClassAtom ;
+                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8777> ;
+                          swrl:argument1 <urn:swrl#organism>
+                        ]
+            ]
+] .
+[ rdf:type swrl:Imp ;
+  swrl:body [ rdf:type swrl:AtomList ;
+              rdf:rest [ rdf:type swrl:AtomList ;
+                         rdf:rest [ rdf:type swrl:AtomList ;
+                                    rdf:rest [ rdf:type swrl:AtomList ;
+                                               rdf:rest [ rdf:type swrl:AtomList ;
+                                                          rdf:rest [ rdf:type swrl:AtomList ;
+                                                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                            swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                            swrl:argument1 <urn:swrl#organism> ;
+                                                                                            swrl:argument2 <urn:swrl#scape>
+                                                                                          ] ;
+                                                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                       swrl:propertyPredicate obo:BFO_0000053 ;
+                                                                                                       swrl:argument1 <urn:swrl#compound_eye> ;
+                                                                                                       swrl:argument2 <urn:swrl#compound_eye_height>
+                                                                                                     ] ;
+                                                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                  swrl:propertyPredicate obo:BFO_0000053 ;
+                                                                                                                  swrl:argument1 <urn:swrl#scape> ;
+                                                                                                                  swrl:argument2 <urn:swrl#scape_length>
+                                                                                                                ] ;
+                                                                                                      rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                 rdf:rest rdf:nil ;
+                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                             swrl:propertyPredicate pato:similar_in_magnitude_relative_to ;
+                                                                                                                             swrl:argument2 <urn:swrl#compound_eye_height> ;
+                                                                                                                             swrl:argument1 <urn:swrl#scape_length>
+                                                                                                                           ]
+                                                                                                               ]
+                                                                                                    ]
+                                                                                         ]
+                                                                              ] ;
+                                                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                 swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                 swrl:argument2 <urn:swrl#compound_eye> ;
+                                                                                 swrl:argument1 <urn:swrl#organism>
+                                                                               ]
+                                                                   ] ;
+                                                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                      swrl:classPredicate obo:PATO_0000122 ;
+                                                                      swrl:argument1 <urn:swrl#scape_length>
+                                                                    ]
+                                                        ] ;
+                                               rdf:first [ rdf:type swrl:ClassAtom ;
+                                                           swrl:classPredicate obo:PATO_0000122 ;
+                                                           swrl:argument1 <urn:swrl#compound_eye_height>
+                                                         ]
+                                             ] ;
+                                    rdf:first [ rdf:type swrl:ClassAtom ;
+                                                swrl:classPredicate obo:HAO_0000908 ;
+                                                swrl:argument1 <urn:swrl#scape>
+                                              ]
+                                  ] ;
+                         rdf:first [ rdf:type swrl:ClassAtom ;
+                                     swrl:classPredicate obo:HAO_0000217 ;
+                                     swrl:argument1 <urn:swrl#compound_eye>
+                                   ]
+                       ] ;
+              rdf:first [ rdf:type swrl:ClassAtom ;
+                          swrl:classPredicate obo:HAO_0000012 ;
+                          swrl:argument1 <urn:swrl#organism>
+                        ]
+            ] ;
+  swrl:head [ rdf:type swrl:AtomList ;
+              rdf:rest rdf:nil ;
+              rdf:first [ rdf:type swrl:ClassAtom ;
+                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8776> ;
+                          swrl:argument1 <urn:swrl#organism>
+                        ]
+            ]
+] .
+[ rdf:type swrl:Imp ;
+  swrl:head [ rdf:type swrl:AtomList ;
+              rdf:rest rdf:nil ;
+              rdf:first [ rdf:type swrl:ClassAtom ;
+                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8800> ;
+                          swrl:argument1 <urn:swrl#organism>
+                        ]
+            ] ;
+  swrl:body [ rdf:type swrl:AtomList ;
+              rdf:first [ rdf:type swrl:ClassAtom ;
+                          swrl:classPredicate obo:HAO_0000012 ;
+                          swrl:argument1 <urn:swrl#organism>
+                        ] ;
+              rdf:rest [ rdf:type swrl:AtomList ;
+                         rdf:rest [ rdf:type swrl:AtomList ;
+                                    rdf:first [ rdf:type swrl:ClassAtom ;
+                                                swrl:classPredicate obo:HAO_0000503 ;
+                                                swrl:argument1 <urn:swrl#malar_space>
+                                              ] ;
+                                    rdf:rest [ rdf:type swrl:AtomList ;
+                                               rdf:rest [ rdf:type swrl:AtomList ;
+                                                          rdf:first [ rdf:type swrl:ClassAtom ;
+                                                                      swrl:classPredicate obo:PATO_0000122 ;
+                                                                      swrl:argument1 <urn:swrl#malar_space_length>
+                                                                    ] ;
+                                                          rdf:rest [ rdf:type swrl:AtomList ;
+                                                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                            swrl:propertyPredicate hymao:has_unit ;
+                                                                                            swrl:argument2 <urn:swrl#compound_eye_height> ;
+                                                                                            swrl:argument1 <urn:swrl#measurement>
+                                                                                          ] ;
+                                                                                rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                       swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                                       swrl:argument2 <urn:swrl#compound_eye> ;
+                                                                                                       swrl:argument1 <urn:swrl#organism>
+                                                                                                     ] ;
+                                                                                           rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                      rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                 rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                            rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                                        swrl:propertyPredicate obo:BFO_0000053 ;
+                                                                                                                                        swrl:argument1 <urn:swrl#malar_space> ;
+                                                                                                                                        swrl:argument2 <urn:swrl#malar_space_length>
+                                                                                                                                      ] ;
+                                                                                                                            rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                       rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                                                                                  rdf:rest rdf:nil ;
+                                                                                                                                                  rdf:first [ rdf:type swrl:BuiltinAtom ;
+                                                                                                                                                              swrl:builtin swrlb:lessThan ;
+                                                                                                                                                              swrl:arguments [ rdf:type rdf:List ;
+                                                                                                                                                                               rdf:first <urn:swrl#magnitude> ;
+                                                                                                                                                                               rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                                                          rdf:first "0.5"^^xsd:float ;
+                                                                                                                                                                                          rdf:rest rdf:nil
+                                                                                                                                                                                        ]
+                                                                                                                                                                             ]
+                                                                                                                                                            ]
+                                                                                                                                                ] ;
+                                                                                                                                       rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
+                                                                                                                                                   swrl:propertyPredicate hymao:has_magnitude ;
+                                                                                                                                                   swrl:argument2 <urn:swrl#magnitude> ;
+                                                                                                                                                   swrl:argument1 <urn:swrl#measurement>
+                                                                                                                                                 ]
+                                                                                                                                     ]
+                                                                                                                          ] ;
+                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                             swrl:propertyPredicate obo:BFO_0000053 ;
+                                                                                                                             swrl:argument1 <urn:swrl#compound_eye> ;
+                                                                                                                             swrl:argument2 <urn:swrl#compound_eye_height>
+                                                                                                                           ]
+                                                                                                               ] ;
+                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                                                  swrl:propertyPredicate obo:BFO_0000051 ;
+                                                                                                                  swrl:argument2 <urn:swrl#malar_space> ;
+                                                                                                                  swrl:argument1 <urn:swrl#organism>
+                                                                                                                ]
+                                                                                                    ]
+                                                                                         ]
+                                                                              ] ;
+                                                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
+                                                                                 swrl:propertyPredicate hymao:has_measurement ;
+                                                                                 swrl:argument1 <urn:swrl#malar_space_length> ;
+                                                                                 swrl:argument2 <urn:swrl#measurement>
+                                                                               ]
+                                                                   ]
+                                                        ] ;
+                                               rdf:first [ rdf:type swrl:ClassAtom ;
+                                                           swrl:classPredicate obo:PATO_0000122 ;
+                                                           swrl:argument1 <urn:swrl#compound_eye_height>
+                                                         ]
+                                             ]
+                                  ] ;
+                         rdf:first [ rdf:type swrl:ClassAtom ;
+                                     swrl:classPredicate obo:HAO_0000217 ;
+                                     swrl:argument1 <urn:swrl#compound_eye>
+                                   ]
+                       ]
+            ]
+] .
+[ rdf:type swrl:Imp ;
+  swrl:body [ rdf:type swrl:AtomList ;
+              rdf:rest [ rdf:type swrl:AtomList ;
+                         rdf:rest [ rdf:type swrl:AtomList ;
+                                    rdf:rest [ rdf:type swrl:AtomList ;
                                                rdf:rest [ rdf:type swrl:AtomList ;
                                                           rdf:first [ rdf:type swrl:ClassAtom ;
                                                                       swrl:classPredicate obo:HAO_0000605 ;
@@ -15721,10 +16083,6 @@ terms:Taxon rdf:type owl:Class .
                                                                                  swrl:argument1 <urn:swrl#vm_of_mesopectus_length>
                                                                                ] ;
                                                                      rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                rdf:first [ rdf:type swrl:ClassAtom ;
-                                                                                            swrl:classPredicate obo:PATO_0000122 ;
-                                                                                            swrl:argument1 <urn:swrl#vm_of_metapectus_length>
-                                                                                          ] ;
                                                                                 rdf:rest [ rdf:type swrl:AtomList ;
                                                                                            rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
                                                                                                        swrl:propertyPredicate obo:BFO_0000051 ;
@@ -15774,184 +16132,28 @@ terms:Taxon rdf:type owl:Class .
                                                                                                                           ]
                                                                                                                ]
                                                                                                     ]
-                                                                                         ]
-                                                                              ]
-                                                                   ]
-                                                        ]
-                                             ]
-                                  ]
-                       ]
-            ] ;
-  swrl:head [ rdf:type swrl:AtomList ;
-              rdf:rest rdf:nil ;
-              rdf:first [ rdf:type swrl:ClassAtom ;
-                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8805> ;
-                          swrl:argument1 <urn:swrl#organism>
-                        ]
-            ]
-] .
-[ rdf:type swrl:Imp ;
-  swrl:body [ rdf:type swrl:AtomList ;
-              rdf:first [ rdf:type swrl:ClassAtom ;
-                          swrl:classPredicate obo:HAO_0000012 ;
-                          swrl:argument1 <urn:swrl#organism>
-                        ] ;
-              rdf:rest [ rdf:type swrl:AtomList ;
-                         rdf:first [ rdf:type swrl:ClassAtom ;
-                                     swrl:classPredicate obo:HAO_0000217 ;
-                                     swrl:argument1 <urn:swrl#compound_eye>
-                                   ] ;
-                         rdf:rest [ rdf:type swrl:AtomList ;
-                                    rdf:first [ rdf:type swrl:ClassAtom ;
-                                                swrl:classPredicate obo:HAO_0000908 ;
-                                                swrl:argument1 <urn:swrl#scape>
-                                              ] ;
-                                    rdf:rest [ rdf:type swrl:AtomList ;
-                                               rdf:rest [ rdf:type swrl:AtomList ;
-                                                          rdf:first [ rdf:type swrl:ClassAtom ;
-                                                                      swrl:classPredicate obo:PATO_0000122 ;
-                                                                      swrl:argument1 <urn:swrl#scape_length>
-                                                                    ] ;
-                                                          rdf:rest [ rdf:type swrl:AtomList ;
-                                                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                 swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                 swrl:argument2 <urn:swrl#compound_eye> ;
-                                                                                 swrl:argument1 <urn:swrl#organism>
-                                                                               ] ;
-                                                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                            swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                            swrl:argument1 <urn:swrl#organism> ;
-                                                                                            swrl:argument2 <urn:swrl#scape>
-                                                                                          ] ;
-                                                                                rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                       swrl:propertyPredicate obo:BFO_0000053 ;
-                                                                                                       swrl:argument1 <urn:swrl#compound_eye> ;
-                                                                                                       swrl:argument2 <urn:swrl#compound_eye_height>
-                                                                                                     ] ;
-                                                                                           rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                      rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                 rdf:rest rdf:nil ;
-                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                             swrl:propertyPredicate pato:increased_in_magnitude_relative_to ;
-                                                                                                                             swrl:argument2 <urn:swrl#compound_eye_height> ;
-                                                                                                                             swrl:argument1 <urn:swrl#scape_length>
-                                                                                                                           ]
-                                                                                                               ] ;
-                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                  swrl:propertyPredicate obo:BFO_0000053 ;
-                                                                                                                  swrl:argument1 <urn:swrl#scape> ;
-                                                                                                                  swrl:argument2 <urn:swrl#scape_length>
-                                                                                                                ]
-                                                                                                    ]
-                                                                                         ]
-                                                                              ]
-                                                                   ]
-                                                        ] ;
-                                               rdf:first [ rdf:type swrl:ClassAtom ;
-                                                           swrl:classPredicate obo:PATO_0000122 ;
-                                                           swrl:argument1 <urn:swrl#compound_eye_height>
-                                                         ]
-                                             ]
-                                  ]
-                       ]
-            ] ;
-  swrl:head [ rdf:type swrl:AtomList ;
-              rdf:rest rdf:nil ;
-              rdf:first [ rdf:type swrl:ClassAtom ;
-                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8777> ;
-                          swrl:argument1 <urn:swrl#organism>
-                        ]
-            ]
-] .
-[ rdf:type swrl:Imp ;
-  swrl:body [ rdf:type swrl:AtomList ;
-              rdf:rest [ rdf:type swrl:AtomList ;
-                         rdf:first [ rdf:type swrl:ClassAtom ;
-                                     swrl:classPredicate obo:BSPO_0000684 ;
-                                     swrl:argument1 <urn:swrl#vm_of_metapectus>
-                                   ] ;
-                         rdf:rest [ rdf:type swrl:AtomList ;
-                                    rdf:first [ rdf:type swrl:ClassAtom ;
-                                                swrl:classPredicate obo:HAO_0000012 ;
-                                                swrl:argument1 <urn:swrl#organism>
-                                              ] ;
-                                    rdf:rest [ rdf:type swrl:AtomList ;
-                                               rdf:rest [ rdf:type swrl:AtomList ;
-                                                          rdf:rest [ rdf:type swrl:AtomList ;
-                                                                     rdf:first [ rdf:type swrl:ClassAtom ;
-                                                                                 swrl:classPredicate obo:PATO_0000122 ;
-                                                                                 swrl:argument1 <urn:swrl#vm_of_mesopectus_length>
-                                                                               ] ;
-                                                                     rdf:rest [ rdf:type swrl:AtomList ;
+                                                                                         ] ;
                                                                                 rdf:first [ rdf:type swrl:ClassAtom ;
                                                                                             swrl:classPredicate obo:PATO_0000122 ;
                                                                                             swrl:argument1 <urn:swrl#vm_of_metapectus_length>
-                                                                                          ] ;
-                                                                                rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                       swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                                       swrl:argument1 <urn:swrl#mesopectus> ;
-                                                                                                       swrl:argument2 <urn:swrl#vm_of_mesopectus>
-                                                                                                     ] ;
-                                                                                           rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                  swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                                                  swrl:argument1 <urn:swrl#metapectus> ;
-                                                                                                                  swrl:argument2 <urn:swrl#vm_of_metapectus>
-                                                                                                                ] ;
-                                                                                                      rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                             swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                                                             swrl:argument2 <urn:swrl#mesopectus> ;
-                                                                                                                             swrl:argument1 <urn:swrl#organism>
-                                                                                                                           ] ;
-                                                                                                                 rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                            rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                                        swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                                                                        swrl:argument2 <urn:swrl#metapectus> ;
-                                                                                                                                        swrl:argument1 <urn:swrl#organism>
-                                                                                                                                      ] ;
-                                                                                                                            rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                                       rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                                                  rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                                                              swrl:propertyPredicate obo:BFO_0000053 ;
-                                                                                                                                                              swrl:argument1 <urn:swrl#vm_of_metapectus> ;
-                                                                                                                                                              swrl:argument2 <urn:swrl#vm_of_metapectus_length>
-                                                                                                                                                            ] ;
-                                                                                                                                                  rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                                                             rdf:rest rdf:nil ;
-                                                                                                                                                             rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                                                                         swrl:propertyPredicate pato:decreased_in_magnitude_relative_to ;
-                                                                                                                                                                         swrl:argument1 <urn:swrl#vm_of_mesopectus_length> ;
-                                                                                                                                                                         swrl:argument2 <urn:swrl#vm_of_metapectus_length>
-                                                                                                                                                                       ]
-                                                                                                                                                           ]
-                                                                                                                                                ] ;
-                                                                                                                                       rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                                                   swrl:propertyPredicate obo:BFO_0000053 ;
-                                                                                                                                                   swrl:argument1 <urn:swrl#vm_of_mesopectus> ;
-                                                                                                                                                   swrl:argument2 <urn:swrl#vm_of_mesopectus_length>
-                                                                                                                                                 ]
-                                                                                                                                     ]
-                                                                                                                          ]
-                                                                                                               ]
-                                                                                                    ]
-                                                                                         ]
+                                                                                          ]
                                                                               ]
-                                                                   ] ;
-                                                          rdf:first [ rdf:type swrl:ClassAtom ;
-                                                                      swrl:classPredicate obo:HAO_0000605 ;
-                                                                      swrl:argument1 <urn:swrl#metapectus>
-                                                                    ]
+                                                                   ]
                                                         ] ;
                                                rdf:first [ rdf:type swrl:ClassAtom ;
                                                            swrl:classPredicate obo:HAO_0000557 ;
                                                            swrl:argument1 <urn:swrl#mesopectus>
                                                          ]
-                                             ]
-                                  ]
+                                             ] ;
+                                    rdf:first [ rdf:type swrl:ClassAtom ;
+                                                swrl:classPredicate obo:HAO_0000012 ;
+                                                swrl:argument1 <urn:swrl#organism>
+                                              ]
+                                  ] ;
+                         rdf:first [ rdf:type swrl:ClassAtom ;
+                                     swrl:classPredicate obo:BSPO_0000684 ;
+                                     swrl:argument1 <urn:swrl#vm_of_metapectus>
+                                   ]
                        ] ;
               rdf:first [ rdf:type swrl:ClassAtom ;
                           swrl:classPredicate obo:BSPO_0000684 ;
@@ -15961,209 +16163,7 @@ terms:Taxon rdf:type owl:Class .
   swrl:head [ rdf:type swrl:AtomList ;
               rdf:rest rdf:nil ;
               rdf:first [ rdf:type swrl:ClassAtom ;
-                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8806> ;
-                          swrl:argument1 <urn:swrl#organism>
-                        ]
-            ]
-] .
-[ rdf:type swrl:Imp ;
-  swrl:head [ rdf:type swrl:AtomList ;
-              rdf:rest rdf:nil ;
-              rdf:first [ rdf:type swrl:ClassAtom ;
-                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8799> ;
-                          swrl:argument1 <urn:swrl#organism>
-                        ]
-            ] ;
-  swrl:body [ rdf:type swrl:AtomList ;
-              rdf:first [ rdf:type swrl:ClassAtom ;
-                          swrl:classPredicate obo:HAO_0000012 ;
-                          swrl:argument1 <urn:swrl#organism>
-                        ] ;
-              rdf:rest [ rdf:type swrl:AtomList ;
-                         rdf:first [ rdf:type swrl:ClassAtom ;
-                                     swrl:classPredicate obo:HAO_0000217 ;
-                                     swrl:argument1 <urn:swrl#compound_eye>
-                                   ] ;
-                         rdf:rest [ rdf:type swrl:AtomList ;
-                                    rdf:first [ rdf:type swrl:ClassAtom ;
-                                                swrl:classPredicate obo:HAO_0000503 ;
-                                                swrl:argument1 <urn:swrl#malar_space>
-                                              ] ;
-                                    rdf:rest [ rdf:type swrl:AtomList ;
-                                               rdf:first [ rdf:type swrl:ClassAtom ;
-                                                           swrl:classPredicate obo:PATO_0000122 ;
-                                                           swrl:argument1 <urn:swrl#compound_eye_height>
-                                                         ] ;
-                                               rdf:rest [ rdf:type swrl:AtomList ;
-                                                          rdf:first [ rdf:type swrl:ClassAtom ;
-                                                                      swrl:classPredicate obo:PATO_0000122 ;
-                                                                      swrl:argument1 <urn:swrl#malar_space_length>
-                                                                    ] ;
-                                                          rdf:rest [ rdf:type swrl:AtomList ;
-                                                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                           rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                      rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                 rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                            rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                                       rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                                                  rdf:rest rdf:nil ;
-                                                                                                                                                  rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                                                                                                                                              swrl:builtin swrlb:greaterThanOrEqual ;
-                                                                                                                                                              swrl:arguments [ rdf:type rdf:List ;
-                                                                                                                                                                               rdf:first <urn:swrl#magnitude> ;
-                                                                                                                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                                                                          rdf:first "0.5"^^xsd:float ;
-                                                                                                                                                                                          rdf:rest rdf:nil
-                                                                                                                                                                                        ]
-                                                                                                                                                                             ]
-                                                                                                                                                            ]
-                                                                                                                                                ] ;
-                                                                                                                                       rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
-                                                                                                                                                   swrl:propertyPredicate hymao:has_magnitude ;
-                                                                                                                                                   swrl:argument2 <urn:swrl#magnitude> ;
-                                                                                                                                                   swrl:argument1 <urn:swrl#measurement>
-                                                                                                                                                 ]
-                                                                                                                                     ] ;
-                                                                                                                            rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                                        swrl:propertyPredicate obo:BFO_0000053 ;
-                                                                                                                                        swrl:argument1 <urn:swrl#malar_space> ;
-                                                                                                                                        swrl:argument2 <urn:swrl#malar_space_length>
-                                                                                                                                      ]
-                                                                                                                          ] ;
-                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                             swrl:propertyPredicate obo:BFO_0000053 ;
-                                                                                                                             swrl:argument1 <urn:swrl#compound_eye> ;
-                                                                                                                             swrl:argument2 <urn:swrl#compound_eye_height>
-                                                                                                                           ]
-                                                                                                               ] ;
-                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                  swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                                                  swrl:argument2 <urn:swrl#malar_space> ;
-                                                                                                                  swrl:argument1 <urn:swrl#organism>
-                                                                                                                ]
-                                                                                                    ] ;
-                                                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                       swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                                       swrl:argument2 <urn:swrl#compound_eye> ;
-                                                                                                       swrl:argument1 <urn:swrl#organism>
-                                                                                                     ]
-                                                                                         ] ;
-                                                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                            swrl:propertyPredicate hymao:has_unit ;
-                                                                                            swrl:argument2 <urn:swrl#compound_eye_height> ;
-                                                                                            swrl:argument1 <urn:swrl#measurement>
-                                                                                          ]
-                                                                              ] ;
-                                                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                 swrl:propertyPredicate hymao:has_measurement ;
-                                                                                 swrl:argument1 <urn:swrl#malar_space_length> ;
-                                                                                 swrl:argument2 <urn:swrl#measurement>
-                                                                               ]
-                                                                   ]
-                                                        ]
-                                             ]
-                                  ]
-                       ]
-            ]
-] .
-[ rdf:type swrl:Imp ;
-  swrl:body [ rdf:type swrl:AtomList ;
-              rdf:first [ rdf:type swrl:ClassAtom ;
-                          swrl:classPredicate obo:HAO_0000012 ;
-                          swrl:argument1 <urn:swrl#organism>
-                        ] ;
-              rdf:rest [ rdf:type swrl:AtomList ;
-                         rdf:rest [ rdf:type swrl:AtomList ;
-                                    rdf:rest [ rdf:type swrl:AtomList ;
-                                               rdf:first [ rdf:type swrl:ClassAtom ;
-                                                           swrl:classPredicate obo:PATO_0000122 ;
-                                                           swrl:argument1 <urn:swrl#seta_length>
-                                                         ] ;
-                                               rdf:rest [ rdf:type swrl:AtomList ;
-                                                          rdf:rest [ rdf:type swrl:AtomList ;
-                                                                     rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                           rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                      rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                 rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                            rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                                       rdf:rest [ rdf:type swrl:AtomList ;
-                                                                                                                                                  rdf:rest rdf:nil ;
-                                                                                                                                                  rdf:first [ rdf:type swrl:BuiltinAtom ;
-                                                                                                                                                              swrl:builtin swrlb:greaterThan ;
-                                                                                                                                                              swrl:arguments [ rdf:type rdf:List ;
-                                                                                                                                                                               rdf:first <urn:swrl#magnitude> ;
-                                                                                                                                                                               rdf:rest [ rdf:type rdf:List ;
-                                                                                                                                                                                          rdf:first "2.0"^^xsd:float ;
-                                                                                                                                                                                          rdf:rest rdf:nil
-                                                                                                                                                                                        ]
-                                                                                                                                                                             ]
-                                                                                                                                                            ]
-                                                                                                                                                ] ;
-                                                                                                                                       rdf:first [ rdf:type swrl:DatavaluedPropertyAtom ;
-                                                                                                                                                   swrl:propertyPredicate hymao:has_magnitude ;
-                                                                                                                                                   swrl:argument2 <urn:swrl#magnitude> ;
-                                                                                                                                                   swrl:argument1 <urn:swrl#measurement>
-                                                                                                                                                 ]
-                                                                                                                                     ] ;
-                                                                                                                            rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                                        swrl:propertyPredicate obo:BFO_0000053 ;
-                                                                                                                                        swrl:argument1 <urn:swrl#seta> ;
-                                                                                                                                        swrl:argument2 <urn:swrl#seta_length>
-                                                                                                                                      ]
-                                                                                                                          ] ;
-                                                                                                                 rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                             swrl:propertyPredicate obo:BFO_0000053 ;
-                                                                                                                             swrl:argument2 <urn:swrl#diameter> ;
-                                                                                                                             swrl:argument1 <urn:swrl#ocellus>
-                                                                                                                           ]
-                                                                                                               ] ;
-                                                                                                      rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                                  swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                                                  swrl:argument1 <urn:swrl#organism> ;
-                                                                                                                  swrl:argument2 <urn:swrl#seta>
-                                                                                                                ]
-                                                                                                    ] ;
-                                                                                           rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                                       swrl:propertyPredicate obo:BFO_0000051 ;
-                                                                                                       swrl:argument2 <urn:swrl#ocellus> ;
-                                                                                                       swrl:argument1 <urn:swrl#organism>
-                                                                                                     ]
-                                                                                         ] ;
-                                                                                rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                            swrl:propertyPredicate hymao:has_unit ;
-                                                                                            swrl:argument1 <urn:swrl#measurement> ;
-                                                                                            swrl:argument2 <urn:swrl#ocellus_diameter>
-                                                                                          ]
-                                                                              ] ;
-                                                                     rdf:first [ rdf:type swrl:IndividualPropertyAtom ;
-                                                                                 swrl:propertyPredicate hymao:has_measurement ;
-                                                                                 swrl:argument2 <urn:swrl#measurement> ;
-                                                                                 swrl:argument1 <urn:swrl#seta_length>
-                                                                               ]
-                                                                   ] ;
-                                                          rdf:first [ rdf:type swrl:ClassAtom ;
-                                                                      swrl:classPredicate obo:PATO_0001334 ;
-                                                                      swrl:argument1 <urn:swrl#ocellus_diameter>
-                                                                    ]
-                                                        ]
-                                             ] ;
-                                    rdf:first [ rdf:type swrl:ClassAtom ;
-                                                swrl:classPredicate obo:HAO_0000935 ;
-                                                swrl:argument1 <urn:swrl#seta>
-                                              ]
-                                  ] ;
-                         rdf:first [ rdf:type swrl:ClassAtom ;
-                                     swrl:classPredicate obo:HAO_0000661 ;
-                                     swrl:argument1 <urn:swrl#ocellus>
-                                   ]
-                       ]
-            ] ;
-  swrl:head [ rdf:type swrl:AtomList ;
-              rdf:rest rdf:nil ;
-              rdf:first [ rdf:type swrl:ClassAtom ;
-                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8765> ;
+                          swrl:classPredicate <http://dx.doi.org/10.5061/dryad.2gd84/3#phenotype_8805> ;
                           swrl:argument1 <urn:swrl#organism>
                         ]
             ]

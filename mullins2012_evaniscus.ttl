@@ -48,7 +48,7 @@
                                               owl:imports obo:bspo.owl ,
                                                           obo:hao.owl ,
                                                           obo:pato.owl ,
-                                                          obo:ro.owl .
+                                                          <http://purl.org/phenoscape/vocab.owl> .
 
 
 #################################################################
