@@ -1,0 +1,1917 @@
+@prefix : <http://www.semanticweb.org/owl/owlapi/turtle#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://www.semanticweb.org/imiko/ontologies/2017/9/OARCS_common_garden_spider_Ad69> .
+
+<http://www.semanticweb.org/imiko/ontologies/2017/9/OARCS_common_garden_spider_Ad69> rdf:type owl:Ontology ;
+                                                                                     
+                                                                                     owl:versionIRI <http://www.semanticweb.org/imiko/ontologies/2017/9/OARCS_common_garden_spider_Ad69> .
+
+
+#################################################################
+#
+#    Annotation properties
+#
+#################################################################
+
+
+###  http://purl.oclc.org/NET/mx-database/has_mx_id
+
+<http://purl.oclc.org/NET/mx-database/has_mx_id> rdf:type owl:AnnotationProperty .
+
+
+
+
+
+#################################################################
+#
+#    Object Properties
+#
+#################################################################
+
+
+###  http://purl.obolibrary.org/obo/CDAO_0000184
+
+<http://purl.obolibrary.org/obo/CDAO_0000184> rdf:type owl:ObjectProperty ;
+                                              
+                                              rdfs:label "has_state" .
+
+
+
+###  http://purl.obolibrary.org/obo/CDAO_0000191
+
+<http://purl.obolibrary.org/obo/CDAO_0000191> rdf:type owl:ObjectProperty ;
+                                              
+                                              rdfs:label "belongs_to_TU" .
+
+
+
+###  http://purl.obolibrary.org/obo/CDAO_0000205
+
+<http://purl.obolibrary.org/obo/CDAO_0000205> rdf:type owl:ObjectProperty ;
+                                              
+                                              rdfs:label "belongs_to_character" .
+
+
+
+###  http://purl.obolibrary.org/obo/IAO_0000219
+
+<http://purl.obolibrary.org/obo/IAO_0000219> rdf:type owl:ObjectProperty ;
+                                             
+                                             rdfs:label "denotes" .
+
+
+
+###  http://purl.oclc.org/NET/mx-database/can_have_state
+
+<http://purl.oclc.org/NET/mx-database/can_have_state> rdf:type owl:ObjectProperty .
+
+
+
+
+
+#################################################################
+#
+#    Classes
+#
+#################################################################
+
+
+###  http://purl.obolibrary.org/obo/CDAO_0000008
+
+<http://purl.obolibrary.org/obo/CDAO_0000008> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "StandardStateDatum" .
+
+
+
+###  http://purl.obolibrary.org/obo/CDAO_0000045
+
+<http://purl.obolibrary.org/obo/CDAO_0000045> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "StandardState" .
+
+
+
+###  http://purl.obolibrary.org/obo/CDAO_0000075
+
+<http://purl.obolibrary.org/obo/CDAO_0000075> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "StandardCharacter" .
+
+
+
+###  http://purl.obolibrary.org/obo/CDAO_0000138
+
+<http://purl.obolibrary.org/obo/CDAO_0000138> rdf:type owl:Class ;
+                                              
+                                              rdfs:label "TU" .
+
+
+
+###  http://rs.tdwg.org/dwc/terms/Taxon
+
+<http://rs.tdwg.org/dwc/terms/Taxon> rdf:type owl:Class .
+
+
+
+
+
+#################################################################
+#
+#    Individuals
+#
+#################################################################
+
+
+###  http://example.org/character_10000
+
+<http://example.org/character_10000> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Third ostium" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10000 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29000> .
+
+
+
+###  http://example.org/character_10001
+
+<http://example.org/character_10001> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Posterior aorta system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10001 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29001> .
+
+
+
+###  http://example.org/character_10002
+
+<http://example.org/character_10002> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Posterior aorta" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10002 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29002> .
+
+
+
+###  http://example.org/character_10003
+
+<http://example.org/character_10003> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "First cardiac artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10003 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29003> .
+
+
+
+###  http://example.org/character_10004
+
+<http://example.org/character_10004> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Second cardiac artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10004 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29004> .
+
+
+
+###  http://example.org/character_10005
+
+<http://example.org/character_10005> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Third cardiac artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10005 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29005> .
+
+
+
+###  http://example.org/character_10006
+
+<http://example.org/character_10006> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Anterior aorta system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10006 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29006> .
+
+
+
+###  http://example.org/character_10007
+
+<http://example.org/character_10007> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Anterior aorta" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10007 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29007> .
+
+
+
+###  http://example.org/character_10008
+
+<http://example.org/character_10008> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Aortic arch" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10008 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29008> .
+
+
+
+###  http://example.org/character_10009
+
+<http://example.org/character_10009> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Cheliceral artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10009 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29009> .
+
+
+
+###  http://example.org/character_10010
+
+<http://example.org/character_10010> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Cheliceral artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10010 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29010> .
+
+
+
+###  http://example.org/character_10011
+
+<http://example.org/character_10011> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Optic artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10011 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29011> .
+
+
+
+###  http://example.org/character_10012
+
+<http://example.org/character_10012> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Optic artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10012 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29012> .
+
+
+
+###  http://example.org/character_10013
+
+<http://example.org/character_10013> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Upper lip artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10013 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29013> .
+
+
+
+###  http://example.org/character_10014
+
+<http://example.org/character_10014> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Upper lip artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10014 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29014> .
+
+
+
+###  http://example.org/character_10015
+
+<http://example.org/character_10015> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Pedipalpal artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10015 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29015> .
+
+
+
+###  http://example.org/character_10016
+
+<http://example.org/character_10016> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Pedipalpal artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10016 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29016> .
+
+
+
+###  http://example.org/character_10017
+
+<http://example.org/character_10017> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "First leg artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10017 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29017> .
+
+
+
+###  http://example.org/character_10018
+
+<http://example.org/character_10018> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "First leg artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10018 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29018> .
+
+
+
+###  http://example.org/character_10019
+
+<http://example.org/character_10019> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Second leg artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10019 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29019> .
+
+
+
+###  http://example.org/character_10020
+
+<http://example.org/character_10020> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Second leg artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10020 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29020> .
+
+
+
+###  http://example.org/character_10021
+
+<http://example.org/character_10021> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Third leg artery systemrn" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10021 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29021> .
+
+
+
+###  http://example.org/character_10022
+
+<http://example.org/character_10022> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Third leg arteryrn" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10022 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29022> .
+
+
+
+###  http://example.org/character_10023
+
+<http://example.org/character_10023> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Fourth leg artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10023 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29023> .
+
+
+
+###  http://example.org/character_10024
+
+<http://example.org/character_10024> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Fourth leg artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10024 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29024> .
+
+
+
+###  http://example.org/character_10025
+
+<http://example.org/character_10025> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Supraneural artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10025 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29025> .
+
+
+
+###  http://example.org/character_10026
+
+<http://example.org/character_10026> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Supraneural artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10026 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29026> .
+
+
+
+###  http://example.org/character_10447
+
+<http://example.org/character_10447> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "First dorsal prosomal artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10447 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30364> .
+
+
+
+###  http://example.org/character_10448
+
+<http://example.org/character_10448> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "First dorsal prosomal artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10448 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30365> .
+
+
+
+###  http://example.org/character_10449
+
+<http://example.org/character_10449> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Second dorsal prosomal artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10449 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30366> .
+
+
+
+###  http://example.org/character_10450
+
+<http://example.org/character_10450> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Second dorsal prosomal artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10450 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30367> .
+
+
+
+###  http://example.org/character_10451
+
+<http://example.org/character_10451> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Third dorsal prosomal artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10451 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30368> .
+
+
+
+###  http://example.org/character_10452
+
+<http://example.org/character_10452> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Third dorsal prosomal artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10452 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30369> .
+
+
+
+###  http://example.org/character_10453
+
+<http://example.org/character_10453> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Epigastric artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10453 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30370> .
+
+
+
+###  http://example.org/character_10454
+
+<http://example.org/character_10454> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Epigastric artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10454 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30371> .
+
+
+
+###  http://example.org/character_10455
+
+<http://example.org/character_10455> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "First ventral branching artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10455 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30372> .
+
+
+
+###  http://example.org/character_10456
+
+<http://example.org/character_10456> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Second ventral branching artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10456 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30373> .
+
+
+
+###  http://example.org/character_10457
+
+<http://example.org/character_10457> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "First lateral transganglionic artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10457 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30374> .
+
+
+
+###  http://example.org/character_10458
+
+<http://example.org/character_10458> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Second lateral transganglionic artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10458 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30375> .
+
+
+
+###  http://example.org/character_10459
+
+<http://example.org/character_10459> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Third lateral transganglionic artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10459 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30376> .
+
+
+
+###  http://example.org/character_10460
+
+<http://example.org/character_10460> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Fourth lateral transganglionic artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10460 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30377> .
+
+
+
+###  http://example.org/character_10461
+
+<http://example.org/character_10461> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Fifth lateral transganglionic artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10461 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30378> .
+
+
+
+###  http://example.org/character_10462
+
+<http://example.org/character_10462> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Sixth lateral transganglionic artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10462 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30379> .
+
+
+
+###  http://example.org/character_10463
+
+<http://example.org/character_10463> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "First median transganglionic artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10463 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30380> .
+
+
+
+###  http://example.org/character_10464
+
+<http://example.org/character_10464> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "First median transganglionic artery system" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10464 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30381> .
+
+
+
+###  http://example.org/character_10465
+
+<http://example.org/character_10465> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                              owl:NamedIndividual ;
+                                     
+                                     rdfs:label "Second median transganglionic artery" ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/has_mx_id> 10465 ;
+                                     
+                                     <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_30382> .
+
+
+
+###  http://example.org/character_9991
+
+<http://example.org/character_9991> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                             owl:NamedIndividual ;
+                                    
+                                    rdfs:label "Tubular heart" ;
+                                    
+                                    <http://purl.oclc.org/NET/mx-database/has_mx_id> 9991 ;
+                                    
+                                    <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_28986> .
+
+
+
+###  http://example.org/character_9996
+
+<http://example.org/character_9996> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                             owl:NamedIndividual ;
+                                    
+                                    rdfs:label "Epicard" ;
+                                    
+                                    <http://purl.oclc.org/NET/mx-database/has_mx_id> 9996 ;
+                                    
+                                    <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_29027> .
+
+
+
+###  http://example.org/character_9997
+
+<http://example.org/character_9997> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                             owl:NamedIndividual ;
+                                    
+                                    rdfs:label "Myocard" ;
+                                    
+                                    <http://purl.oclc.org/NET/mx-database/has_mx_id> 9997 ;
+                                    
+                                    <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_28997> .
+
+
+
+###  http://example.org/character_9998
+
+<http://example.org/character_9998> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                             owl:NamedIndividual ;
+                                    
+                                    rdfs:label "First ostium" ;
+                                    
+                                    <http://purl.oclc.org/NET/mx-database/has_mx_id> 9998 ;
+                                    
+                                    <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_28998> .
+
+
+
+###  http://example.org/character_9999
+
+<http://example.org/character_9999> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000075> ,
+                                             owl:NamedIndividual ;
+                                    
+                                    rdfs:label "Second ostium" ;
+                                    
+                                    <http://purl.oclc.org/NET/mx-database/has_mx_id> 9999 ;
+                                    
+                                    <http://purl.oclc.org/NET/mx-database/can_have_state> <http://example.org/state_28999> .
+
+
+
+###  http://example.org/coding_522947
+
+<http://example.org/coding_522947> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522947" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522947 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_9991> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_28986> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522948
+
+<http://example.org/coding_522948> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522948" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522948 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_9996> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29027> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522949
+
+<http://example.org/coding_522949> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522949" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522949 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_9997> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_28997> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522950
+
+<http://example.org/coding_522950> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522950" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522950 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_9998> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_28998> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522951
+
+<http://example.org/coding_522951> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522951" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522951 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_9999> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_28999> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522952
+
+<http://example.org/coding_522952> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522952" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522952 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10000> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29000> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522953
+
+<http://example.org/coding_522953> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522953" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522953 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10001> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29001> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522954
+
+<http://example.org/coding_522954> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522954" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522954 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10002> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29002> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522955
+
+<http://example.org/coding_522955> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522955" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522955 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10003> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29003> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522956
+
+<http://example.org/coding_522956> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522956" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522956 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10004> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29004> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522957
+
+<http://example.org/coding_522957> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522957" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522957 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10005> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29005> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522958
+
+<http://example.org/coding_522958> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522958" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522958 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10006> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29006> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522959
+
+<http://example.org/coding_522959> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522959" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522959 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10007> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29007> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522960
+
+<http://example.org/coding_522960> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522960" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522960 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10008> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29008> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522961
+
+<http://example.org/coding_522961> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522961" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522961 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10009> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29009> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522962
+
+<http://example.org/coding_522962> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522962" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522962 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10010> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29010> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522963
+
+<http://example.org/coding_522963> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522963" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522963 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10011> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29011> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522964
+
+<http://example.org/coding_522964> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522964" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522964 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10012> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29012> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522965
+
+<http://example.org/coding_522965> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522965" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522965 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10013> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29013> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522966
+
+<http://example.org/coding_522966> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522966" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522966 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10014> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29014> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522967
+
+<http://example.org/coding_522967> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522967" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522967 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10015> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29015> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522968
+
+<http://example.org/coding_522968> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522968" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522968 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10016> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29016> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522969
+
+<http://example.org/coding_522969> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522969" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522969 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10017> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29017> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522970
+
+<http://example.org/coding_522970> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522970" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522970 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10018> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29018> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522971
+
+<http://example.org/coding_522971> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522971" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522971 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10019> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29019> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522972
+
+<http://example.org/coding_522972> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522972" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522972 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10020> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29020> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522973
+
+<http://example.org/coding_522973> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522973" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522973 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10021> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29021> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522974
+
+<http://example.org/coding_522974> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522974" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522974 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10022> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29022> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522975
+
+<http://example.org/coding_522975> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522975" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522975 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10023> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29023> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522976
+
+<http://example.org/coding_522976> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522976" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522976 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10024> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29024> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522977
+
+<http://example.org/coding_522977> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522977" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522977 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10025> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29025> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/coding_522978
+
+<http://example.org/coding_522978> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000008> ,
+                                            owl:NamedIndividual ;
+                                   
+                                   rdfs:label "id: 522978" ;
+                                   
+                                   <http://purl.oclc.org/NET/mx-database/has_mx_id> 522978 ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000205> <http://example.org/character_10026> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000184> <http://example.org/state_29026> ;
+                                   
+                                   <http://purl.obolibrary.org/obo/CDAO_0000191> <http://example.org/otu_24858/> .
+
+
+
+###  http://example.org/otu_24858
+
+<http://example.org/otu_24858> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000138> ,
+                                        owl:NamedIndividual ;
+                               
+                               rdfs:label "Araneus diadematus Clerck, 1757" ;
+                               
+                               <http://purl.oclc.org/NET/mx-database/has_mx_id> 24858 .
+
+
+
+###  http://example.org/state_28986
+
+<http://example.org/state_28986> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Tubular heart Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 28986 .
+
+
+
+###  http://example.org/state_28997
+
+<http://example.org/state_28997> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "myocard Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 28997 .
+
+
+
+###  http://example.org/state_28998
+
+<http://example.org/state_28998> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "first ostium Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 28998 .
+
+
+
+###  http://example.org/state_28999
+
+<http://example.org/state_28999> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "second ostium Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 28999 .
+
+
+
+###  http://example.org/state_29000
+
+<http://example.org/state_29000> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "third ostium Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29000 .
+
+
+
+###  http://example.org/state_29001
+
+<http://example.org/state_29001> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "posterior aorta system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29001 .
+
+
+
+###  http://example.org/state_29002
+
+<http://example.org/state_29002> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "posterior aorta Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29002 .
+
+
+
+###  http://example.org/state_29003
+
+<http://example.org/state_29003> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "first cardiac artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29003 .
+
+
+
+###  http://example.org/state_29004
+
+<http://example.org/state_29004> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "second cardiac artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29004 .
+
+
+
+###  http://example.org/state_29005
+
+<http://example.org/state_29005> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "third cardiac artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29005 .
+
+
+
+###  http://example.org/state_29006
+
+<http://example.org/state_29006> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "anterior aorta system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29006 .
+
+
+
+###  http://example.org/state_29007
+
+<http://example.org/state_29007> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "anterior aorta Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29007 .
+
+
+
+###  http://example.org/state_29008
+
+<http://example.org/state_29008> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "aortic arch Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29008 .
+
+
+
+###  http://example.org/state_29009
+
+<http://example.org/state_29009> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "cheliceral artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29009 .
+
+
+
+###  http://example.org/state_29010
+
+<http://example.org/state_29010> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "cheliceral artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29010 .
+
+
+
+###  http://example.org/state_29011
+
+<http://example.org/state_29011> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "optic artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29011 .
+
+
+
+###  http://example.org/state_29012
+
+<http://example.org/state_29012> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "optic artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29012 .
+
+
+
+###  http://example.org/state_29013
+
+<http://example.org/state_29013> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "upper lip artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29013 .
+
+
+
+###  http://example.org/state_29014
+
+<http://example.org/state_29014> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "upper lip artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29014 .
+
+
+
+###  http://example.org/state_29015
+
+<http://example.org/state_29015> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "pedipalpal artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29015 .
+
+
+
+###  http://example.org/state_29016
+
+<http://example.org/state_29016> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "pedipalpal artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29016 .
+
+
+
+###  http://example.org/state_29017
+
+<http://example.org/state_29017> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "first leg artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29017 .
+
+
+
+###  http://example.org/state_29018
+
+<http://example.org/state_29018> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "first leg artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29018 .
+
+
+
+###  http://example.org/state_29019
+
+<http://example.org/state_29019> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "second leg artery system" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29019 .
+
+
+
+###  http://example.org/state_29020
+
+<http://example.org/state_29020> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "second leg artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29020 .
+
+
+
+###  http://example.org/state_29021
+
+<http://example.org/state_29021> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "third leg artery system" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29021 .
+
+
+
+###  http://example.org/state_29022
+
+<http://example.org/state_29022> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "third leg artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29022 .
+
+
+
+###  http://example.org/state_29023
+
+<http://example.org/state_29023> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "fourth leg artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29023 .
+
+
+
+###  http://example.org/state_29024
+
+<http://example.org/state_29024> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "fourth leg artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29024 .
+
+
+
+###  http://example.org/state_29025
+
+<http://example.org/state_29025> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "supraneural artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29025 .
+
+
+
+###  http://example.org/state_29026
+
+<http://example.org/state_29026> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "supraneural artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29026 .
+
+
+
+###  http://example.org/state_29027
+
+<http://example.org/state_29027> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Epicard Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 29027 .
+
+
+
+###  http://example.org/state_30364
+
+<http://example.org/state_30364> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "First dorsal prosomal artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30364 .
+
+
+
+###  http://example.org/state_30365
+
+<http://example.org/state_30365> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "First dorsal prosomal artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30365 .
+
+
+
+###  http://example.org/state_30366
+
+<http://example.org/state_30366> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Second dorsal prosomal artery system Ad 69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30366 .
+
+
+
+###  http://example.org/state_30367
+
+<http://example.org/state_30367> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Second dorsal prosomal artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30367 .
+
+
+
+###  http://example.org/state_30368
+
+<http://example.org/state_30368> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Third dorsal prosomal artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30368 .
+
+
+
+###  http://example.org/state_30369
+
+<http://example.org/state_30369> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Third dorsal prosomal artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30369 .
+
+
+
+###  http://example.org/state_30370
+
+<http://example.org/state_30370> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Epigastric artery system Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30370 .
+
+
+
+###  http://example.org/state_30371
+
+<http://example.org/state_30371> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Epigastric artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30371 .
+
+
+
+###  http://example.org/state_30372
+
+<http://example.org/state_30372> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "First ventral branching artery" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30372 .
+
+
+
+###  http://example.org/state_30373
+
+<http://example.org/state_30373> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Second ventral branching artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30373 .
+
+
+
+###  http://example.org/state_30374
+
+<http://example.org/state_30374> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "First lateral transganglionic artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30374 .
+
+
+
+###  http://example.org/state_30375
+
+<http://example.org/state_30375> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Second lateral transganglionic artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30375 .
+
+
+
+###  http://example.org/state_30376
+
+<http://example.org/state_30376> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Third lateral transganglionic artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30376 .
+
+
+
+###  http://example.org/state_30377
+
+<http://example.org/state_30377> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Fourth lateral transganglionic artery" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30377 .
+
+
+
+###  http://example.org/state_30378
+
+<http://example.org/state_30378> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Fifth lateral transganglionic artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30378 .
+
+
+
+###  http://example.org/state_30379
+
+<http://example.org/state_30379> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Sixth lateral transganglionic artery Ad69" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30379 .
+
+
+
+###  http://example.org/state_30380
+
+<http://example.org/state_30380> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "First median transganglionic artery" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30380 .
+
+
+
+###  http://example.org/state_30381
+
+<http://example.org/state_30381> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "First median transganglionic artery system" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30381 .
+
+
+
+###  http://example.org/state_30382
+
+<http://example.org/state_30382> rdf:type <http://purl.obolibrary.org/obo/CDAO_0000045> ,
+                                          owl:NamedIndividual ;
+                                 
+                                 rdfs:label "Second median transganglionic artery" ;
+                                 
+                                 <http://purl.oclc.org/NET/mx-database/has_mx_id> 30382 .
+
+
+
+###  http://example.org/otu_24858/
+
+<http://example.org/otu_24858/> rdf:type owl:NamedIndividual .
+
+
+
+
+###  Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net
+
